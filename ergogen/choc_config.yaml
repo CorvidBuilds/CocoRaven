@@ -1,5 +1,5 @@
 units:
-  kx: cy
+  kx: cx
   ky: cy
   px: 2
   py: 2
@@ -28,14 +28,14 @@ points:
 
   zones:
     matrix:
-      rotate: -10
+      rotate: -15
       mirror: &mirror
         ref: matrix_inner_bottom
         shift: [0, -U]
-        distance: 4.15U
+        distance: 4.25U
       columns:
         pinkycluster:
-          origin: [ 0, 1ky ]
+          origin: [ 0, 1cy ]
           rotate: 0
           key:
             column_net: P21
@@ -43,38 +43,38 @@ points:
         pinky:
           rotate: 0
           stagger: 4
-          spread: ky
-          origin: [ 0, -1ky ]
+          spread: cx
+          origin: [ 0, -1cy ]
           key:
             column_net: P20
             mirror.column_net: P20
         ring:
           rotate: 0
           stagger: 8.8
-          spread: ky
+          spread: cx
           key:
             column_net: P19
             mirror.column_net: P19
         middle:
-          origin: [ 0, -1ky ]
+          origin: [ 0, -1cy ]
           rotate: 0
           stagger: 4.7
-          spread: ky
+          spread: cx
           key:
             column_net: P18
             mirror.column_net: P18
         index:
-          origin: [ 0, -1ky ]
+          origin: [ 0, -1cy ]
           rotate: 0
           stagger: -4.7
-          spread: ky
+          spread: cx
           key:
             column_net: P15
             mirror.column_net: P15
         inner:
-          origin: [ 0, -1ky ]
+          origin: [ 0, -1cy ]
           rotate: 0
-          spread: ky
+          spread: cx
           stagger: -3
           key:
             column_net: P14
@@ -119,13 +119,13 @@ points:
       mirror: &mirror_tb
         ref: matrix_inner_bottom
         shift: [0, -U]
-        distance: 4.15U
+        distance: 4.25U
       anchor:
         ref: matrix_inner_bottom
         shift: [ 15.5, -18 ]
       columns:
         only:
-          origin: [-ky/2, -ky/2]
+          origin: [-cx/2, -cy/2]
           stagger: 5.64
           spread: -3.04
           rotate: -30
@@ -153,13 +153,13 @@ points:
       mirror: &mirror
         ref: matrix_inner_bottom
         shift: [0, -U]
-        distance: 4.15U
+        distance: 4.25U
       anchor:
         ref: matrix_inner_bottom
         shift: [ 17.5, -40 ]
       columns:
         right:
-          origin: [-ky/2, -ky/2]
+          origin: [-cx/2, -cy/2]
           stagger: 5.64
           spread: -3.04
           rotate: -30
@@ -168,27 +168,27 @@ points:
             mirror.column_net: P16
             column_mark: R
         middle:
-          origin: [-ky/2, -ky/2]
+          origin: [-cx/2, -cy/2]
           rotate: 15
           stagger: -4.72
-          spread: -1.5ky + 0.27
+          spread: -1.5cx + 0.27
           key:
             column_net: P4
             mirror.column_net: P17
             column_mark: M
         left:
-          origin: [-ky/2, -ky/2]
+          origin: [-cx/2, -cy/2]
           stagger: -4.4
-          spread: -ky + 0.6
+          spread: -cx + 0.6
           rotate: 14
           key:
             column_net: P3
             mirror.column_net: P18
             column_mark: P
         lefter:
-          origin: [-ky/2, -ky/2]
+          origin: [-cx/2, -cy/2]
           stagger: -0
-          spread: -ky + 0
+          spread: -cx + 0
           rotate: 0
           key:
             column_net: P3
@@ -239,68 +239,68 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_pinkycluster_top
-            shift: [-px-ky/2, py+ky/2]
+            shift: [-px-cx/2, py+cy/2]
           - ref: matrix_middle_top
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
           - ref: matrix_middle_top
-            shift: [ky/2, 2ky]
+            shift: [cx/2, 2cy]
           - ref: matrix_pinkycluster_top
-            shift: [-px-ky/2, py+3ky]
+            shift: [-px-cx/2, py+3cy]
     mirror_top_arc_left_intersect:
       - type: polygon
         points:
           - ref: mirror_matrix_pinkycluster_top
-            shift: [-px-ky/2, py+ky/2]
+            shift: [-px-cx/2, py+cy/2]
           - ref: mirror_matrix_middle_top
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
           - ref: mirror_matrix_middle_top
-            shift: [ky/2, 2ky]
+            shift: [cx/2, 2cy]
           - ref: mirror_matrix_pinkycluster_top
-            shift: [-px-ky/2, py+3ky]
+            shift: [-px-cx/2, py+3cy]
     top_arc_right_intersect:
       - type: polygon
         points:
           - ref: matrix_middle_top
-            shift: [ky/2, -ky/2]
+            shift: [cx/2, -cy/2]
           - ref: matrix_middle_top
-            shift: [ky/2, 2ky]
+            shift: [cx/2, 2cy]
           - ref: matrix_inner_top
-            shift: [ky/2, 3ky]
+            shift: [cx/2, 3cy]
           - ref: matrix_inner_top
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
     mirror_top_arc_right_intersect:
       - type: polygon
         points:
           - ref: mirror_matrix_middle_top
-            shift: [ky/2, -ky/2]
+            shift: [cx/2, -cy/2]
           - ref: mirror_matrix_middle_top
-            shift: [ky/2, 2ky]
+            shift: [cx/2, 2cy]
           - ref: mirror_matrix_inner_top
-            shift: [ky/2, 3ky]
+            shift: [cx/2, 3cy]
           - ref: mirror_matrix_inner_top
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
     bottom_arc_left_intersect:
       - type: polygon
         points:
           - ref: matrix_pinkycluster_bottom
-            shift: [-ky/2, ky/2]
+            shift: [-cx/2, cy/2]
           - ref: matrix_middle_bottom
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
           - ref: matrix_middle_bottom
-            shift: [ky/2, -4ky]
+            shift: [cx/2, -4cy]
           - ref: matrix_pinkycluster_bottom
-            shift: [-ky/2, -ky]
+            shift: [-cx/2, -cy]
     bottom_arc_right_intersect:
       - type: polygon
         points:
           - ref: matrix_middle_bottom
-            shift: [ky/2, -ky/2]
+            shift: [cx/2, -cy/2]
           - ref: thumbfan_right_thumb
-            shift: [ky/2, ky/2]
+            shift: [cx/2, cy/2]
           - ref: thumbfan_right_thumb
-            shift: [ky, -ky/2]
+            shift: [cx, -cy/2]
           - ref: thumbfan_right_thumb
-            shift: [-2.1ky, -ky]
+            shift: [-2.1cx, -cy]
 
     arc_top_left: #todo check with top left corner shift
       - type: circle
@@ -385,49 +385,49 @@ outlines:
       - type: polygon
         points:
           - ref: matrix_pinkycluster_top
-            shift: [-px-ky/2, ky/2]
+            shift: [-px-cx/2, cy/2]
           - ref: matrix_ring_top
-            shift: [-ky/2, ky/2]
+            shift: [-cx/2, cy/2]
           - ref: matrix_middle_top
-            shift: [-ky/2, ky/2]
+            shift: [-cx/2, cy/2]
 
           - ref: mirror_matrix_middle_top
-            shift: [-ky/2, ky/2]
+            shift: [-cx/2, cy/2]
           - ref: mirror_matrix_ring_top
-            shift: [-ky/2, ky/2]
+            shift: [-cx/2, cy/2]
           - ref: mirror_matrix_pinkycluster_top
-            shift: [-px-ky/2, ky/2]
+            shift: [-px-cx/2, cy/2]
 
           - ref: mirror_matrix_pinkycluster_bottom
-            shift: [-px-ky/2, -9.5]
+            shift: [-px-cx/2, -9.5]
           - ref: mirror_thumbfan_lefter_thumb
-            shift: [-9.5, -py-ky/2]
+            shift: [-9.5, -py-cy/2]
           - ref: mirror_thumbfan_left_thumb
-            shift: [ky/2, -py-ky/2]
+            shift: [cx/2, -py-cy/2]
           - ref: mirror_thumbfan_middle_thumb
-            shift: [ky/2, -py-ky/2]
+            shift: [cx/2, -py-cy/2]
           - ref: mirror_thumbfan_right_thumb
-            shift: [px+ky/2, -py-ky/2]
+            shift: [px+cx/2, -py-cy/2]
           - ref: mirror_thumbfan_right_thumb
-            shift: [px+ky/2, py+ky/2]
+            shift: [px+cx/2, py+cy/2]
 
 
           - ref: thumbfan_right_thumb
-            shift: [px+ky/2, py+ky/2]
+            shift: [px+cx/2, py+cy/2]
           - ref: thumbfan_right_thumb
-            shift: [px+ky/2, -py-ky/2]
+            shift: [px+cx/2, -py-cy/2]
           - ref: thumbfan_middle_thumb
-            shift: [ky/2, -py-ky/2]
+            shift: [cx/2, -py-cy/2]
           - ref: thumbfan_left_thumb
-            shift: [ky/2, -py-ky/2]
+            shift: [cx/2, -py-cy/2]
           - ref: thumbfan_lefter_thumb
-            shift: [-9.5, -py-ky/2]
+            shift: [-9.5, -py-cy/2]
           
           
           - ref: matrix_pinkycluster_bottom
-            shift: [-px-ky/2, -9.5]
+            shift: [-px-cx/2, -9.5]
           - ref: matrix_pinkycluster_top
-            shift: [-px-ky/2, ky/2]
+            shift: [-px-cx/2, cy/2]
     controller_area:
       main:
         type: rectangle
